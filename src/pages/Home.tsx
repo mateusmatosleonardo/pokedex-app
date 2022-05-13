@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import Header from '../components/Header';
 import Pokeball from '../assets/icons/Pokeball.png';
 import {theme} from '../theme/theme';
+import Search from '../components/Search';
 
 const Home = () => {
   return (
@@ -19,9 +20,10 @@ const Home = () => {
           <Text style={styles.titleHeader}>Pokédex</Text>
         </View>
         <TouchableOpacity activeOpacity={0.7}>
-          <Icon name="arrowdown" size={24} color={theme.colors.darkGraY} />
+          <Icon name="arrowdown" size={24} color={theme.colors.darkGray} />
         </TouchableOpacity>
       </Header>
+      <Search />
     </View>
   );
 };
@@ -30,6 +32,7 @@ const styles = StyleSheet.create({
   main: {
     flex: 1,
     backgroundColor: theme.colors.bgPrimary,
+    paddingHorizontal: 25,
   },
   header: {
     flexDirection: 'row',
@@ -38,12 +41,11 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 60,
     paddingVertical: 5,
-    paddingHorizontal: 25,
   },
   titleHeader: {
     fontFamily: theme.fonts.PoppinsBold,
     fontSize: theme.sizes.large,
-    color: theme.colors.darkGraY,
+    color: theme.colors.darkGray,
     marginLeft: 12,
   },
 });

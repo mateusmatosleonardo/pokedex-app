@@ -2,7 +2,8 @@ export const theme = {
   name: 'DefaultTheme',
   colors: {
     primary200: '#A592E6',
-    darkGraY: '#212121',
+    white: '#FFFFFF',
+    darkGray: '#212121',
     bgPrimary: '#F7F7F7',
   },
   fonts: {
