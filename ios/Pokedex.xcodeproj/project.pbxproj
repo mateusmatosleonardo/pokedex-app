@@ -30,6 +30,8 @@
 		24B6772900AA4FCABA743955 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 019E458DB49D43C79752D684 /* Octicons.ttf */; };
 		AD1737FD92AD4C2A85B050EF /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EF42A78CFB94D988006DC2F /* SimpleLineIcons.ttf */; };
 		866E2ABA03234143BCF98648 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32643A399DA748819B54EE17 /* Zocial.ttf */; };
+		5121A0A7284449C6B625FA1F /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1666CEFFA7FC4A7DB6193DF7 /* Poppins-Bold.ttf */; };
+		BC9A346F95194C20ADD1A76C /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55F4122962A94C33B3ED53DF /* Poppins-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		019E458DB49D43C79752D684 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		2EF42A78CFB94D988006DC2F /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		32643A399DA748819B54EE17 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1666CEFFA7FC4A7DB6193DF7 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; name = "Poppins-Bold.ttf"; path = "../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		55F4122962A94C33B3ED53DF /* Poppins-Regular.ttf */ = {isa = PBXFileReference; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +204,8 @@
 				019E458DB49D43C79752D684 /* Octicons.ttf */,
 				2EF42A78CFB94D988006DC2F /* SimpleLineIcons.ttf */,
 				32643A399DA748819B54EE17 /* Zocial.ttf */,
+				1666CEFFA7FC4A7DB6193DF7 /* Poppins-Bold.ttf */,
+				55F4122962A94C33B3ED53DF /* Poppins-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -317,6 +323,8 @@
 				24B6772900AA4FCABA743955 /* Octicons.ttf in Resources */,
 				AD1737FD92AD4C2A85B050EF /* SimpleLineIcons.ttf in Resources */,
 				866E2ABA03234143BCF98648 /* Zocial.ttf in Resources */,
+				5121A0A7284449C6B625FA1F /* Poppins-Bold.ttf in Resources */,
+				BC9A346F95194C20ADD1A76C /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

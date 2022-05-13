@@ -1,11 +1,13 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import Icon from 'react-native-vector-icons/AntDesign';
 import Header from '../components/Header';
 import Pokeball from '../assets/icons/Pokeball.png';
+import {theme} from '../theme/theme';
 
 const Home = () => {
   return (
-    <View>
+    <View style={styles.main}>
       <Header style={styles.header}>
         <View
           style={{
@@ -16,25 +18,33 @@ const Home = () => {
           <Image source={Pokeball} style={{width: 28, height: 28}} />
           <Text style={styles.titleHeader}>Pokédex</Text>
         </View>
+        <TouchableOpacity activeOpacity={0.7}>
+          <Icon name="arrowdown" size={24} color={theme.colors.darkGraY} />
+        </TouchableOpacity>
       </Header>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  main: {
+    flex: 1,
+    backgroundColor: theme.colors.bgPrimary,
+  },
   header: {
     flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     width: '100%',
-    height: 50,
+    height: 60,
     paddingVertical: 5,
     paddingHorizontal: 25,
-    backgroundColor: 'salmon',
   },
   titleHeader: {
-    fontSize: 20,
-    fontWeight: 'bold',
+    fontFamily: theme.fonts.PoppinsBold,
+    fontSize: theme.sizes.large,
+    color: theme.colors.darkGraY,
     marginLeft: 12,
-    // fontFamily: 'Poppins-Bold',
   },
 });
 
