@@ -1,10 +1,20 @@
 import React from 'react';
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  FlatList,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Header from '../components/Header';
 import Pokeball from '../assets/icons/Pokeball.png';
 import {theme} from '../theme/theme';
 import Search from '../components/Search';
+import CardPokemon from '../components/CardPokemon';
+import {dataMock} from '../mocks/mocks';
 
 const Home = () => {
   return (
@@ -24,6 +34,20 @@ const Home = () => {
         </TouchableOpacity>
       </Header>
       <Search />
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        overScrollMode="never"
+        contentContainerStyle={{
+          width: '100%',
+          paddingTop: 12,
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          justifyContent: 'space-between',
+        }}>
+        {dataMock.map((item, index) => (
+          <CardPokemon picture={item.picture} name={item.name} />
+        ))}
+      </ScrollView>
     </View>
   );
 };
