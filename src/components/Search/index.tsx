@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
     height: 41.5,
     paddingLeft: 28,
     borderRadius: 8,
+    marginBottom: 18,
     backgroundColor: theme.colors.white,
   },
 });

@@ -4,7 +4,7 @@ import {theme} from '../../theme/theme';
 
 interface CardPokemonProps {
   name?: string;
-  picture?: any;
+  picture?: any | null;
 }
 
 const CardPokemon = ({name, picture}: CardPokemonProps) => {

@@ -1,6 +1,5 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
-  FlatList,
   Image,
   ScrollView,
   StyleSheet,
@@ -11,12 +10,29 @@ import {
 import Icon from 'react-native-vector-icons/AntDesign';
 import Header from '../components/Header';
 import Pokeball from '../assets/icons/Pokeball.png';
-import {theme} from '../theme/theme';
 import Search from '../components/Search';
 import CardPokemon from '../components/CardPokemon';
-import {dataMock} from '../mocks/mocks';
+import {theme} from '../theme/theme';
+import {api} from '../services/api';
+import {AxiosError} from 'axios';
 
 const Home = () => {
+  const [results, setResults] = React.useState([]);
+
+  const getPokemons = () => {
+    api
+      .get('/pokemon')
+      .then(({data}) => {
+        setResults(data.results);
+        console.log(data);
+      })
+      .catch((error: AxiosError) => console.log(error));
+  };
+
+  useEffect(() => {
+    getPokemons();
+  }, []);
+
   return (
     <View style={styles.main}>
       <Header style={styles.header}>
@@ -39,13 +55,16 @@ const Home = () => {
         overScrollMode="never"
         contentContainerStyle={{
           width: '100%',
-          paddingTop: 12,
           flexDirection: 'row',
           flexWrap: 'wrap',
           justifyContent: 'space-between',
         }}>
-        {dataMock.map((item, index) => (
-          <CardPokemon picture={item.picture} name={item.name} />
+        {results.map((item: {image: string; name: string}, index) => (
+          <CardPokemon
+            key={index}
+            picture={{uri: item.image}}
+            name={item.name}
+          />
         ))}
       </ScrollView>
     </View>
