@@ -4,13 +4,14 @@ import {theme} from '../../theme/theme';
 
 interface CardPokemonProps {
   name?: string;
-  picture?: any | null;
+  picture?: any;
+  styleContainer?: {};
 }
 
-const CardPokemon = ({name, picture}: CardPokemonProps) => {
+const CardPokemon = ({name, picture, styleContainer}: CardPokemonProps) => {
   return (
     <View style={{width: 104, marginBottom: 12}}>
-      <View style={{backgroundColor: '#74CB48', borderRadius: 8}}>
+      <View style={styleContainer}>
         <Image
           source={picture}
           style={{

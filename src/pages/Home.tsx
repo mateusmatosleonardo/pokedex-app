@@ -13,6 +13,7 @@ import Pokeball from '../assets/icons/Pokeball.png';
 import Search from '../components/Search';
 import CardPokemon from '../components/CardPokemon';
 import {theme} from '../theme/theme';
+import {dataMock} from '../utils/pokemonsMock';
 
 const Home = () => {
   return (
@@ -41,7 +42,17 @@ const Home = () => {
           flexWrap: 'wrap',
           justifyContent: 'space-between',
         }}>
-        <CardPokemon />
+        {dataMock.map((item, index) => (
+          <CardPokemon
+            key={index}
+            name={item.name}
+            picture={item.picture}
+            styleContainer={{
+              backgroundColor: item.color,
+              borderRadius: 8,
+            }}
+          />
+        ))}
       </ScrollView>
     </View>
   );
