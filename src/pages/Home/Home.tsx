@@ -8,17 +8,26 @@ import {
   View,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
-import Header from '../components/Header';
-import Pokeball from '../assets/icons/Pokeball.png';
-import Search from '../components/Search';
-import CardPokemon from '../components/CardPokemon';
-import {theme} from '../theme/theme';
-import {dataMock} from '../utils/pokemonsMock';
+import Header from '../../components/Header';
+import Pokeball from '../../assets/icons/Pokeball.png';
+import Search from '../../components/Search';
+import CardPokemon from '../../components/CardPokemon';
+import {theme} from '../../theme/theme';
+import {dataMock} from '../../utils/pokemonsMock';
+import {Main} from './styles';
 
 const Home = () => {
   return (
-    <View style={styles.main}>
-      <Header style={styles.header}>
+    <Main style={{backgroundColor: theme.colors.bgPrimary}}>
+      <Header
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          width: '100%',
+          height: 60,
+          paddingVertical: 5,
+        }}>
         <View
           style={{
             flexDirection: 'row',
@@ -54,24 +63,11 @@ const Home = () => {
           />
         ))}
       </ScrollView>
-    </View>
+    </Main>
   );
 };
 
 const styles = StyleSheet.create({
-  main: {
-    flex: 1,
-    backgroundColor: theme.colors.bgPrimary,
-    paddingHorizontal: 25,
-  },
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    width: '100%',
-    height: 60,
-    paddingVertical: 5,
-  },
   titleHeader: {
     fontFamily: theme.fonts.PoppinsBold,
     fontSize: theme.sizes.large,
