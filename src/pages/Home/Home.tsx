@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Image,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Image, ScrollView, TouchableOpacity, View} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Header from '../../components/Header';
 import Pokeball from '../../assets/icons/Pokeball.png';
@@ -14,7 +7,7 @@ import Search from '../../components/Search';
 import CardPokemon from '../../components/CardPokemon';
 import {theme} from '../../theme/theme';
 import {dataMock} from '../../utils/pokemonsMock';
-import {Main} from './styles';
+import {Main, TitleHeader} from './styles';
 
 const Home = () => {
   return (
@@ -35,7 +28,14 @@ const Home = () => {
             alignItems: 'center',
           }}>
           <Image source={Pokeball} style={{width: 28, height: 28}} />
-          <Text style={styles.titleHeader}>Pokédex</Text>
+          <TitleHeader
+            style={{
+              fontFamily: theme.fonts.PoppinsBold,
+              fontSize: theme.sizes.large,
+              color: theme.colors.darkGray,
+            }}>
+            Pokédex
+          </TitleHeader>
         </View>
         <TouchableOpacity activeOpacity={0.7}>
           <Icon name="arrowdown" size={24} color={theme.colors.darkGray} />
@@ -66,14 +66,5 @@ const Home = () => {
     </Main>
   );
 };
-
-const styles = StyleSheet.create({
-  titleHeader: {
-    fontFamily: theme.fonts.PoppinsBold,
-    fontSize: theme.sizes.large,
-    color: theme.colors.darkGray,
-    marginLeft: 12,
-  },
-});
 
 export default Home;
