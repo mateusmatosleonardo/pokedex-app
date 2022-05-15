@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {
   Image,
   ScrollView,
@@ -13,26 +13,8 @@ import Pokeball from '../assets/icons/Pokeball.png';
 import Search from '../components/Search';
 import CardPokemon from '../components/CardPokemon';
 import {theme} from '../theme/theme';
-import {api} from '../services/api';
-import {AxiosError} from 'axios';
 
 const Home = () => {
-  const [results, setResults] = React.useState([]);
-
-  const getPokemons = () => {
-    api
-      .get('/pokemon')
-      .then(({data}) => {
-        setResults(data.results);
-        console.log(data);
-      })
-      .catch((error: AxiosError) => console.log(error));
-  };
-
-  useEffect(() => {
-    getPokemons();
-  }, []);
-
   return (
     <View style={styles.main}>
       <Header style={styles.header}>
@@ -59,13 +41,7 @@ const Home = () => {
           flexWrap: 'wrap',
           justifyContent: 'space-between',
         }}>
-        {results.map((item: {image: string; name: string}, index) => (
-          <CardPokemon
-            key={index}
-            picture={{uri: item.image}}
-            name={item.name}
-          />
-        ))}
+        <CardPokemon />
       </ScrollView>
     </View>
   );
