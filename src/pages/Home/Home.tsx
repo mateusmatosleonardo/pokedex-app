@@ -59,6 +59,7 @@ const Home = () => {
             styleContainer={{
               backgroundColor: item.color,
               borderRadius: 8,
+              paddingHorizontal: 2,
             }}
           />
         ))}

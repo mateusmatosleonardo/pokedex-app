@@ -15,11 +15,12 @@ const CardPokemon = ({name, picture, styleContainer}: CardPokemonProps) => {
         <Image
           source={picture}
           style={{
-            width: 104,
-            height: 104,
+            width: 99.2,
+            height: 90,
             resizeMode: 'contain',
             backgroundColor: theme.colors.white,
             borderRadius: 8,
+            marginTop: 2,
           }}
         />
         <Text
