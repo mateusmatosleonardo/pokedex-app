@@ -4,12 +4,19 @@ export const dataMock = [
     name: 'Bulbasaur',
     picture: require('../assets/images/Bulbasaur.png'),
     color: '#74CB48',
+    type: 'Grass',
+    weight: 6.9,
+    height: 0.7,
+    mov: 'Pó de sono',
+    about:
+      'Tem preferência por coisas quentes. Quando chove, diz-se que o vapor jorra da ponta de sua cauda.',
   },
   {
     id: 2,
     name: 'Charmander',
     picture: require('../assets/images/Charmander.png'),
     color: '#F57D31',
+    type: 'Fogo',
   },
   {
     id: 3,
