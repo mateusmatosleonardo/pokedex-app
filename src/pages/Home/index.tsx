@@ -1,5 +1,6 @@
 import React from 'react';
 import {Image, ScrollView, TouchableOpacity, View} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Header from '../../components/Header';
 import Pokeball from '../../assets/icons/Pokeball.png';
@@ -10,6 +11,7 @@ import {dataMock} from '../../utils/pokemonsMock';
 import {Main, TitleHeader} from './styles';
 
 const Home = () => {
+  const navigation = useNavigation<any>();
   return (
     <Main style={{backgroundColor: theme.colors.bgPrimary}}>
       <Header
@@ -56,6 +58,7 @@ const Home = () => {
             key={index}
             name={item.name}
             picture={item.picture}
+            action={() => navigation.navigate('Details', {item})}
             styleContainer={{
               backgroundColor: item.color,
               borderRadius: 8,
